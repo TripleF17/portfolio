@@ -36,6 +36,14 @@ body {
 }
 
 /* Navigation Bar */
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation Bar */
 nav {
   background-color: #1f1f1f;
   padding: 0.8em 1.5em;
@@ -81,6 +89,53 @@ nav {
 .navbar a:hover {
   color: #00bcd4;
 }
+
+/* Mobile styles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: #1f1f1f;
+    width: 100%;
+    padding: 1em 0;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    border-top: 2px solid #333;
+  }
+
+  .navbar li {
+    margin: 1em 0;
+  }
+
+  .navbar.open {
+    display: flex;
+    max-height: 500px; /* Adjust as needed */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .logo {
+    flex: 1;
+  }
+}
+
 
 /* Mobile styles */
 .menu-toggle {
